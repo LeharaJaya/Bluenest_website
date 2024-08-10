@@ -1,0 +1,82 @@
+body{
+    position: relative;
+    width: 100vw;
+    margin: 0%;
+    height: fit-content;
+    background-color: black;
+    background-image: url(../pics/background.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    overflow-y: auto;
+    overflow-x: hidden;   
+} 
+/* center the svg diagram in the middle*/
+#container{
+    display: flex;
+    position: absolute;
+    top: -200px;
+    width: 84%;
+    height: 100%;
+    margin: 35px 5%;
+    height: 120vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 13, 27);
+    font-family: 'Open Sans';
+    font-style: normal;
+    
+}
+/* set the color of text in the diagram*/
+svg text{
+   
+    font-weight: 900;
+    font-size: 18px;
+    fill: whitesmoke;
+    
+}
+
+.content-items text{
+    font-weight: 200;
+    font-size: 14px;
+
+}
+
+rect,path{
+    stroke:rgba(245, 245, 245, 0.379);
+}
+
+svg{
+    width: 95%;
+    height: 100%;
+}
+
+.active text{
+    fill:rgb(253, 253, 253);
+}
+
+.active rect{
+    fill: dodgerblue;
+}
+/* change the text color when hover*/
+.item:hover text{
+    fill: rgb(255, 255, 255);
+}
+/* change the rectangle color when hover*/
+.item:hover rect{
+    fill: dodgerblue;
+}
+
+.content-items:hover text{
+    fill:whitesmoke;
+}
+
+.content-items:hover rect{
+    fill: dodgerblue;
+}
+
+
+body{
+    background-color:rgb(1, 13, 27);
+    }
+ 

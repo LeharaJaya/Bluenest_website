@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content page Student 01 Lehara</title>
+    <link rel="stylesheet" href="../deploy/student1/content page/contentpagelehara.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="slogan">
+        <p>Let's Preserve Our Seas for Tomorrow's Dreams...</p>
+        <button class="user-profile" onclick="location.href='profile.html';">Sign Up/Sign In</button>
+    </div>
+
+    <div class="header">
+        <a href="leharasplashscreen.html">
+            <img src="../deploy/student1/content page/logo.png" alt="Logo" class="logo">
+        </a>
+        <span class="website-name">Blue Nest</span>
+    </div>
+
+    <span class="menu-icon" id="menu-icon" onclick="openNav()">&#9776;</span>
+
+    <div id="navbar" class="overlay">
+        <div class="overlay-content">
+            <a href="home.html">Home</a>
+            <a href="leharashop.html">Shop</a>
+            <a href="gallery2.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">About Us</a>
+        </div>
+    </div>
+    
+     <!-- CONTENT -->
+     <h1>Understanding Sustainable Ocean Governance</h1>
+     <p class="intro">The foundation for controlling human activity in the marine environment and maintaining the robustness and health of ocean ecosystems is sustainable ocean governance. It includes a thorough strategy for protecting the environment, advancing social justice, and managing the ocean's resources in balance.
+
+        The fundamental tenets of sustainable ocean governance are adaptation, openness, and equity. It acknowledges the interdependence of marine ecosystems and the demand for integrated management strategies that take into account the many uses of ocean resources and space.</p>
+     <div class="sub_topic_links_container">
+         <span><a href="#sub_topic_1">Marine Spatial Planning </a></span>
+         <span><a href="#sub_topic_2">Integrated Coastal Management </a></span>
+         <span><a href="#sub_topic_3">Ecosystem Approach to Marine Management </a></span>
+     </div>
+     <hr>
+    <div class="sub_topic" id="sub_topic_1">
+        <img src="../deploy/student1/content page/marinespatialplanning.png" alt="">
+        <div>
+            <h2> Marine Spatial Planning</h2>
+            <p>The methodical process of assigning and managing ocean space to accomplish social, economic, and ecological goals is known as marine spatial planning. maritime spatial planning seeks to reduce disputes and guarantee the sustainable use of maritime resources by delineating zones for different uses, such as shipping, fishing, and conservation.</p>
+            <p>In addition, MSP functions inside institutional and legal frameworks, encouraging global collaboration to tackle transboundary issues and advance responsible ocean governance. In order to maintain the resilience and health of our oceans for future generations, MSP is a dynamic and adaptable process that constantly changes to match the demands and complexities of our marine ecosystems.</p>
+        </div>
+    </div>
+    <div class="sub_topic" id="sub_topic_2">
+        <div>
+            <h2>Integrated Coastal Management</h2>
+            <p>Integrated coastal management (ICM) is a sustainable approach to managing coastal areas, balancing ecological preservation with socioeconomic advancement. It involves diverse stakeholders from enterprises, communities, government agencies, and conservation organizations, promoting a shared responsibility for coastal resources. ICM addresses issues like pollution, urbanization, habitat loss, and climate change through coordinated planning and decision-making.</p>
+            <p>ICM's emphasis on adaptive management strategies which enable adaptability and responsiveness in the face of changing environmental and socioeconomic conditions is essential to its success. Through ongoing observation, evaluation, and integration of new information and technology, Integrated Coastal Management (ICM) supports well-informed decision-making that advances the sustainability and resilience of both coastal populations and ecosystems. ICM is a useful framework for attaining long-term coastal resilience and prosperity, guaranteeing the welfare of both the present and the future generations, thanks to its collaborative, adaptable, and inclusive approach.</p>
+        </div>
+        <img src="../deploy/student1/content page/coastalmanagement.jpg" alt="">
+    </div>
+    <div class="sub_topic" id="sub_topic_3">
+        <img src="../deploy/student1/content page/Ecosystem.jpg" alt="">
+        <div>
+            <h2>Ecosystem Approach to Marine Management </h2>
+            <p>The ecosystem approach to marine management emphasizes the importance of considering entire ecosystems and their interactions when making management decisions. This holistic approach takes into account the interconnectedness of species and habitats, as well as the ecosystem services they provide.</p>
+            <p>Furthermore,Stakeholder engagement in Marine Protected Areas (MSP) helps identify shared goals, resolve conflicts, and contribute to the planning process. This participatory approach builds trust, strengthens stakeholder capacity, and promotes ownership of outcomes. By fostering inclusive decision-making, MSP enhances its effectiveness and legitimacy, leading to more sustainable outcomes for marine ecosystems and coastal communities. This participatory approach builds trust and social cohesion, ultimately enhancing the sustainability of MSP initiatives.</p>
+        </div>
+    </div>
+    <span id="back_to_top_link"><a href="#">Back to top &UpArrow;</a></span>
+    <span id = "Editorspage"><a href="LeharaPageEditor.html">Editors page </a></span>
+    <footer class="footer" style="position: relative; bottom: 0;">
+        <div class="socialIcons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="leharashop.html">Shop</a></li>
+                <li><a href="gallery2.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">About Us</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+            </ul>
+        </div>
+        <div class="copyright">&copy; 2024 Blue Nest. All rights reserved.</div>
+        <img src="../deploy/student1/content page/logo.png" alt="Logo" class="footer-logo">
+        
+    </footer>
+    <script>
+       window.addEventListener('scroll', function () {
+    var menuIcon = document.getElementById('menu-icon');
+    var headerHeight = document.querySelector('.header').offsetHeight;
+    if (window.scrollY >= headerHeight) {
+        menuIcon.style.top = '10%';
+    } else {
+        menuIcon.style.top = (headerHeight - window.scrollY);
+    }
+});
+
+function openNav() {
+    var navbar = document.getElementById("navbar");
+    var menuIcon = document.getElementById("menu-icon");
+
+    if (navbar.style.width === "100%") {
+        navbar.style.width = "0";
+        navbar.classList.remove('open');
+        menuIcon.innerHTML = "&#9776;";
+        menuIcon.style.transition = "transform 0.3s ease"; 
+        menuIcon.style.transform = "rotate(0deg)"; 
+    } else {
+        navbar.style.width = "100%";
+        navbar.classList.add('open');
+        menuIcon.innerHTML = "&times;";
+        menuIcon.style.transition = "transform 0.3s ease"; 
+        menuIcon.style.transform = "rotate(90deg)"; 
+    }
+}
+
+function closeNav() {
+    var navbar = document.getElementById("navbar");
+    var menuIcon = document.getElementById("menu-icon");
+    navbar.style.width = "0";
+    navbar.classList.remove('open');
+    menuIcon.innerHTML = "&#9776;"; 
+    menuIcon.style.transition = "transform 0.3s ease"; 
+    menuIcon.style.transform = "rotate(0deg)"; 
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var currentUrl = window.location.href;
+
+    // Highlight navbar links
+    var navbarLinks = document.querySelectorAll(".overlay-content a");
+    navbarLinks.forEach(function(link) {
+        if (link.href === currentUrl) {
+            link.classList.add("active");
+        }
+    });
+
+    // Highlight footer links
+    var footerLinks = document.querySelectorAll(".footerNav ul li a");
+    footerLinks.forEach(function(link) {
+        if (link.href === currentUrl) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info</title>
+    <link rel="stylesheet" href="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/navbar-footer/template.css">
+    <script src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/navbar-footer/template.js"></script>
+    <link rel="stylesheet" href="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/user profile/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <link rel="stylesheet" href="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/navbar-footer/template.css">
+  
+  
+  </head>
+  <body>
+
+    <nav>
+
+        
+      <div class="slogan">
+          <p>Let's Preserve Our Seas for Tomorrow's Dreams...</p>
+          <a href= "profile.html" >
+            <button class="user-profile" >Sign In</button>
+          </a>
+      </div>
+    
+      <div class="header">
+          <a href="leharasplashscreen.html">
+              <img src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/navbar-footer/logo.png" alt="Logo" class="logo">
+          </a>
+          <span class="website-name">Blue Nest</span>
+      </div>
+    
+      <span class="menu-icon" id="menu-icon" onclick="openNav()">&#9776;</span>
+    
+      <div id="navbar" class="overlay">
+          <div class="overlay-content">
+            <a href="home.html">Home</a>
+            <a href="leharashop.html">Shop</a>
+            <a href="gallery2.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="team.html">About Us</a>
+              
+          </div>
+      </div>
+    </nav>
+
+
+<!-- plays background video for user welcome page -->
+    <div class="contain">
+      <video autoplay muted loop class="video" id="vid">
+        <source src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/user profile/images/video_background.mp4" type="video/mp4" />
+      </video>
+    </div>
+    
+<!-- line for welcoming the user -->
+    <div class="start-container" id="st-con">
+      <h1 class="topic">Let's start to bulid Our User Profile!!!</h1>
+      <button type="button" id="start">Start</button>
+    </div>
+
+    <!-- Input field for user response -->
+
+    <div class="container" id="con">
+      <img src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/user profile/images/coral.png" alt="" />
+      
+      <div id="prompt" class="prompt">
+        <input type="text" id="userResponse" class="input_box" />
+
+        </div>
+        <div class="prompt">
+        <button id="previousButton" onclick="previousQuestion()">
+          Previous
+        </button>
+        <button id="skipButton" onclick="skipFunc()">Skip</button>
+        <button id="submitButton" onclick="submitResponse()">Submit</button>
+      </div>
+    </div>
+
+    <!-- Container for displaying user information collection -->
+    <div class="container" id="userCollectionContainer">
+      <h2>User Information Collection</h2>
+      <div id="pro-bar" class="pro-bar"></div>
+      <div id="progress">Progress: <span id="progressValue">0%</span></div>
+      <div id="output"></div>
+    </div>
+<!-- if user completely set up  the profile -->
+    <div class="container-greet" id="congrats">
+      <h1 class="congrats">Congratulations!!!</h1>
+      <img
+        src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/user profile/images/congratulations_pic.png"
+        width="400"
+        height="500"
+        alt="Congratulations_icon"
+      />
+    </div>
+
+    <script src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/user profile/profile.js"></script>
+    
+    <footer>
+
+      <div class="footer">
+  
+          
+  
+          <div class="socialIcons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+  
+          <div class="footerNav">
+              <ul>
+                  <li><a  href="home.html">Home</a></li>
+                  <li><a href="leharashop.html">Shop</a></li>
+                  <li><a href="gallery2.html">Gallery</a></li>
+                  <li><a href="feedback.html">Feedback</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                  <li><a href="team.html">About Us</a></li>
+                  <li><a href="profile.html"  class="active">User Profile</a></li>
+              </ul>
+          </div>
+  
+          <div class="copyright">&copy; 2024 Blue Nest. All rights reserved.</div>
+  
+          <img src="../deploy/w2055319_asra-ameer/w2055319_asra-ameer/navbar-footer/logo.png" alt="Logo" class="footer-logo">
+  
+          <button class="page-editor" onclick="location.href='w2055319_editor.html';">Editor's Page</button>
+  
+      </div>
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ /*  doubt............. */
+  overflow-x: hidden;
+  height: 100vh;
+}
+/* .start-container{
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0 solid #ccc;
+        background-color: #80e8e1;
+        position: relative;
+        top: 0px;
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+      } */
+
+.start-container button {
+  padding: 4px 12px;
+  background-color: rgb(37, 125, 180);
+  color: #ccc;
+  font-weight: 500;
+  border: 2px solid rgb(135, 135, 196);
+  border-radius: 35px;
+  cursor: pointer;
+  top: 200px;
+  margin: 30 auto;
+  position: relative;
+  left: 45%;
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "Acme", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 50px;
+}
+.start-container button:hover {
+  background-color: rgba(255, 255, 255, 0.137);
+  color: rgb(37, 125, 180);
+  border: 2px solid rgb(68, 135, 236);
+}
+.container {
+  visibility: hidden;
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #1999efbf;
+  border-radius: 15px;
+  top: -250px;
+}
+.prompt {
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+
+  top: 50px;
+}
+.error {
+  color: red;
+}
+.pro-bar {
+  height: 10px;
+  background-color: rgba(28, 161, 214, 0.84);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: 0%;
+}
+.contain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.topic {
+  position: relative;
+  top: 125px;
+  left: 375px;
+  color: rgb(19, 19, 44);
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 78px;
+}
+.input_box {
+  border: 1.5px solid #2f74a1bf;
+  height: 24px;
+  width: 50%;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+#previousButton,
+#skipButton {
+  color: rgb(37, 125, 180);
+  background-color: rgba(255, 255, 255);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: "Poppins", sans-serif;
+}
+#previousButton:hover,
+#skipButton:hover {
+  color: rgba(255, 255, 255);
+  background-color: rgb(37, 125, 180);
+  cursor: pointer;
+}
+
+#submitButton {
+  color: rgb(26, 211, 23);
+  background-color: rgb(248, 252, 254);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-size: medium;
+  font-family: "Poppins", sans-serif;
+}
+#submitButton:hover {
+  color: rgb(248, 252, 254);
+  background-color: rgb(26, 211, 23);
+}
+.container img {
+  position: absolute;
+  right: -68%;
+  top: -20px;
+  width: 350px;
+  height: 750px;
+}
+.container-greet {
+  visibility: hidden;
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  position: absolute;
+
+  box-shadow: 2px 2px 2px 2px #888888;
+  top:32%;
+  left: 36%;
+}
+.congrats {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  font-stretch: expanded;
+  color: rgba(12, 207, 241, 0.966);
+ 
+}
+/* #con{
+        position: relative;
+        top:100px;
+      } */

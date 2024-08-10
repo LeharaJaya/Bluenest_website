@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Nest- Preserving Our Seas for Tomorrow's Dreams</title>
+    <link href="thumbnail.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body {
+                margin: auto;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #0465828c;
+            }
+        
+            .slogan {
+                text-align: center;
+                color: #fff;
+                background-color: #0b6387;
+                padding: 10px;
+                position: sticky;
+                top: 0;
+                z-index: 999;
+            }
+        
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: white;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                margin-left: 1%;
+                margin-right: 40%;
+            }
+        
+            .website-name {
+                font-size: 56px;
+                font-weight: bolder;
+                color: #fff;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        
+            .logo {
+                height: 150px;
+                width: 150px;
+                cursor: pointer;
+                filter: brightness(250%) contrast(100%);
+            }
+        
+            .menu-icon {
+                font-size: 48px;
+                color: #fff;
+                cursor: pointer;
+                position: fixed;
+                top: 15%;
+                right: 3%;
+                z-index: 999;
+                background-color: #04658244;
+            }
+        
+            .menu-icon:hover {
+                background-color: #0465828c;
+                color: #2b8eb8;
+            }
+        
+            .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to right, #04658244, #02303bff);
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+        
+            .overlay a.active {
+                background-color: #046582;
+                color: #fff;
+            }
+
+            .footerNav ul li a.active{
+                color: #fff;
+            }
+        
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 5%;
+                display: none;
+            }
+        
+            #navbar.open .overlay-content {
+                display: block;
+            }
+        
+            .overlay a {
+                padding: 1%;
+                text-decoration: none;
+                font-size: 24px;
+                color: #f8f8f8;
+                display: block;
+                transition: 0.3s;
+            }
+        
+            #navbar a.active {
+                background-color: #fff;
+                color: #046582;
+            }
+        
+            .overlay a.active:hover,
+            .overlay a.active:focus {
+                background-color: #024d63;
+            }
+        
+            .overlay a:hover,
+            .overlay a:focus {
+                color: #2b8eb8;
+                background-color: #f8f8f8;
+            }
+        
+            .overlay .closebtn {
+                display: none;
+            }
+        
+            @media screen and (max-height: 450px) {
+                .overlay a {
+                    font-size: 18px;
+                }
+            }
+        
+            .footer {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background: #0b6387;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+            }
+        
+            .socialIcons {
+                display: flex;
+                justify-content: center;
+            }
+        
+            .socialIcons a {
+                text-decoration: none;
+                padding: 10px;
+                background-color: white;
+                margin: 10px;
+                border-radius: 50%;
+            }
+        
+            .socialIcons a i {
+                font-size: 2em;
+                color: #2b8eb8;
+                opacity: 0, 9;
+            }
+        
+            .socialIcons a:hover {
+                background-color: #fff;
+                transition: 0.5s;
+            }
+        
+            .socialIcons a:hover i {
+                color: white;
+                transition: 0.5s;
+            }
+        
+            .footerNav {
+                margin: 30px 0;
+            }
+        
+            .footerNav ul {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+            }
+        
+            .footerNav ul li a {
+                color: white;
+                margin: 20px;
+                text-decoration: none;
+                font-size: 1.3em;
+                opacity: 0.7;
+                transition: 0.5s;
+            }
+        
+            .footerNav ul li a:hover {
+                opacity: 1;
+                color: #fff;
+            }
+        
+            .copyright {
+                font-size: 14px;
+            }
+        
+            .footer-logo {
+                display: block;
+                margin: 0 auto;
+                width: 150px;
+                height: auto;
+            }
+        
+            .page-editor {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                font-size: 18px;
+                background-color: transparent;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                text-decoration: none;
+                text-decoration-line: none;
+            }
+        
+            .page-editor::before {
+                content: '';
+                position: absolute;
+                top: -100%;
+                left: -200%;
+                width: 300%;
+                height: 300%;
+                background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+                transition: all 0.5s;
+                pointer-events: none;
+            }
+        
+            .page-editor:hover::before {
+                top: -30%;
+                left: -30%;
+            }
+        
+            .page-editor:hover {
+                color: #f8f8f8;
+            }
+        
+            .page-editor:focus {
+                outline: none;
+            }
+
+            .user-profile {
+                position: absolute;
+                top: 18%; 
+                right: 2%; 
+                background-color: transparent;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        
+            .user-profile::before {
+                content: '';
+                position: absolute;
+                top: -100%;
+                left: -200%;
+                width: 300%;
+                height: 300%;
+                background: transparent;
+                transition: all 0.5s;
+                pointer-events: none;
+            }
+        
+            .user-profile:hover::before {
+                top: -30%;
+                left: -30%;
+            }
+        
+            .user-profile:hover {
+                color: #0465828c;
+            }
+        
+            .user-profile:focus {
+                outline: none;
+            }
+        </style>
+        
+</head>
+
+<body>
+
+    <div class="slogan">
+        <p>Let's Preserve Our Seas for Tomorrow's Dreams...</p>
+        <button class="user-profile" onclick="location.href='#UserProfile';">Sign Up/Sign In</button>
+    </div>
+
+    <div class="header">
+        <a href="#splashscreen">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <span class="website-name">Blue Nest</span>
+    </div>
+
+    <span class="menu-icon" id="menu-icon" onclick="openNav()">&#9776;</span>
+
+    <div id="navbar" class="overlay">
+        <div class="overlay-content">
+            <a href="Home.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Gallery</a>
+            <a href="Feedback.html">Feedback</a>
+            <a href="#">Sitemap</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="contain2">
+            <button onclick="changeFontSize(14)" class="button4">A</button>
+            <button onclick="changeFontSize(18)" class="button5">A</button>
+            <button onclick="changeFontSize(24)" class="button6">A</button>
+    
+        </div>
+    
+        
+        <div class="top-gallery">
+            <div class="gallery-item" onclick="displayImage ('images/gallery/reduce marine pollution.jpg','01','The oceans are essential to all life as we know it. In addition to providing us with oxygen, oceans also control the climate and are a major source of food. Moreover, a vast variety of animals can be found in the waters! Regrettably, 60% of coral reefs worldwide are in decline or dead. It is vitally important to remove plastic and marine waste since it endangers human health and the environment as well as marine life. A large portion of the trash cannot decompose. According to estimates from the U.S. Fish and Wildlife Service, around 8 million tons of trash enter the ocean annually!')">
+                 <div class="description"><br>Reduce Marine Pollution.</div>
+                 <img src="images/gallery/reduce marine pollution.jpg" alt="Image 1" class="gallery-item img">
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/restore.jpg','02','Many of the world is oceans are being negatively impacted by human activity, endangering ecosystems, habitats, and marine life. Coastal development, pollution and runoff, overfishing or destructive fishing, and the introduction of non-native species are some of these risks. The phenomenon of ocean acidification and warming of the seas is another significant impact of climate change Marine protected areas (MPAs) were established as a result of the awareness that action must be taken to stop or reverse the damage.In general',' a marine protected area (MPA) is an area of the ocean with restricted human activities.A marine protected area is defined as “any area of the marine environment that has been reserved by federal, state, tribal, territorial, or local laws or regulations to provide lasting protection for part or all of the natural and cultural resources therein.” Specifics vary depending on where you live. This concept is applied globally.')">
+            <div class="description"><br>Protect and Restore Ecosystems.</div>
+            <img src="images/gallery/restore.jpg" alt="Image 2" class="gallery-item img">
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/oceanacidification.png','03','In saltwater, carbon dioxide dissolves as it reaches the ocean. Initially, carbonic acid is formed. After then, the carbonic acid dissociates:releasing hydrogen and bicarbonate ions. Ocean acidification is caused by a decrease in carbonate ions as a result of absorbing more CO2 and an increase in hydrogen ions. Carbonate ions are necessary for the growth and survival of shells on clams, mussels, crabs, corals, and other marine organisms.Ocean surface temperatures are rising due to the increasing amount of carbon dioxide in the atmosphere, which is also contributing to ocean acidification.Despite being two distinct phenomena, warming and acidity combine to harm marine ecosystems. Not all oceanic changes are happening at the same rate: gradients of depth, temperature, and latitude differ significantly.')">
+            <div class="description"><br> Reduce Ocean Acidification. </div>
+            <img src="images/gallery/oceanacidification.png" alt="Image 3" class="gallery-item img">
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/sustainablefishing.jpg','04',' Around the world, fishing is an essential source of food and nourishment for communities, as well as a means of subsistence. 38 million people work in wild capture fisheries, and seafood is the primary source of protein for over a third of the world is population.We can help end hunger and poverty and ensure food for the future by practicing sustainable fishing.But excessive bycatch, unrestricted fishing, and overfishing are examples of unsustainable fishing methods that endanger our oceans.The demand for seafood is rising worldwide, and over a third of the world is fisheries have been overfished. Sustainable fishing has the potential to stop this decrease and guarantee that there are enough fish in the ocean for fishing to continue for a very long time.For the purpose of providing a growing population with a nutrient-rich food source, the long-term health of fish populations is also essential.')">
+            <div class="description"><br>Sustainable Fishing.</div>
+            <img src="images/gallery/sustainablefishing.jpg" alt="Image 4" class="gallery-item img">
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/ConserveCoastalandMarineAreas.jpg','05','Nearly 75% of the earth is made up of oceans, which support the planet is greatest ecosystem. Every region is large coastal inhabitants rely on them for their prosperity and means of subsistence. In addition, the oceans support an abundance of marine life, provide half of the oxygen humans breathe, and regulate the climate, among other invaluable environmental functions. However, despite their vital importance, the increasing effects of marine pollution, overfishing, and climate change—including ocean acidification—threaten to impede efforts to conserve the world is seas. The most vulnerable developing states are small island nations. Oceans are transboundary, thus managing marine resources necessitates actions at all levels—national, regional, and international—to reduce risks.')">
+            <div class="description"><br>Conserve Coastal and Marine Areas.</div>
+            <img src="images/gallery/ConserveCoastalandMarineAreas.jpg" alt="Image 5" class="gallery-item img">
+        </div>
+    </div>
+        
+    <div class="middle-gallery"><!--ssource code: https://codepen.io/ludmila-tretyakova/pen/bGNppGG-->
+        <img id="selectedImage" class="selected-image" src="images/gallery/SustainableSeafood.jpg" alt="Selected Image">
+        <div id="selectedImageDescription" class="description"></div>
+        <div class="new-div-content">
+            <!--<div><img src="logo.png" height="50px" width="50px"></div>-->
+            <p>Seafood that has been raised or harvested in a way that doesn't damage the environment or other wildlife is considered environmentally sustainable seafood, as it contributes to the resilience and health of ocean ecosystems.
+    
+                The term "wild-caught seafood" refers to seafood whose populations are responsibly managed, not overfished, and whose fishing gear has little effect on surrounding habitat and wildlife. 
+                
+            </p>
+        </div>
+    </div>
+        
+    
+    <div class="bottom-gallery">
+        <div class="gallery-item" onclick="displayImage('images/gallery/Economic Benefits.jpg','06','Increase the economic gains from the sustainable use of marine resources by 2030 for small island developing states and least developed nations, especially through sustainable fisheries, aquaculture, and tourism management.While much work remains to be done to attain sustainability, significant progress has been achieved in mitigating the negative environmental effects of tourism. However, less progress has been made in utilizing tourism to support local economic growth and the well-being of indigenous people.')">
+            <div class="description"><br>Increase the Economic Benefits from Sustainable <br>use of Marine Resources.</div>
+            <img src="images/gallery/Economic Benefits.jpg" alt="Image " class="gallery-item img">
+            
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/Overfishing.jpg','07','Industrial fishing can go well beyond the threshold of over-exploitation thanks to detrimental fisheries subsidies. More than half of the $35 billion annually allocated to fisheries subsidies are detrimental, indicating a connection to overfishing, overcapacity, or illicit fishing. Small-scale fishermen are thus forced to give up their catch to industrial trawlers, as their operating costs are artificially lowered. The risk of overfishing is really transferred to the countries that can least afford it, with other countries funding their vessels to fish in African waters twice as much as African governments do.')">
+            <div class="description"><br>End Subslides Contributing<br>to Overfishing.</div>
+            <img src="images/gallery/Overfishing.jpg" alt="Image 7" class="gallery-item img">
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/scientific knowledge essential.jpg','08', 'To improve ocean health and increase the contribution of marine biodiversity to the development of developing countries, especially small island developing states and least developed countries, it is important to increase scientific knowledge, develop research capacity, and transfer marine technology while keeping in mind the criteria and guidelines of the Intergovernmental Oceanographic Commission.')">
+            <div class="description"><br>Increase scientific Knowledge,Research and Technology<br>for ocean Health.</div>
+            <img src="images/gallery/scientific knowledge essential.jpg" alt="Image 8" class="gallery-item img">
+            
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/SmallScaleFishing.jpg','09','Over 90% of the workforce in capture fisheries is directly employed in small-scale and artisanal fishing, employing over 113 million people. The majority are found in poor nations.The majority of fishermen involved in several well-known fisheries, such as mahi-mahi and blue swimming crab, are small-scale or artisanal operators. These goods are in great demand and are mostly used in the US, EU, Japan, and China, among other major international markets.Over the past three decades, the demand for seafood has increased dramatically worldwide and is predicted to do so in the future, particularly in industries that mostly rely on small-scale fisheries for their supply. In order to successfully manage small-scale fisheries and enhance the social and economic well-being of small-scale and artisanal fishermen, new strategies and instruments will be needed to meet this expanding demand.')">
+            <div class="description"><br><br>Support Small<br>Scale Fishers.</div>
+            <img src="images/gallery/SmallScaleFishing.jpg" alt="Image 9" class="gallery-item img">
+            
+        </div>
+        <div class="gallery-item" onclick="displayImage('images/gallery/International-Law.jpg','10','The freedom of the seas theory, which was proposed in the 17th century and effectively restricted sovereign rights and jurisdiction over the oceans to a narrow sea belt encircling a country is shore, had long applied to the oceans. The other oceans were proclaimed to belong to no one and to everyone. Although this state of affairs persisted until the middle of the 20th century, there was pressure to expand national claims to offshore resources by the middle of the century.The Law of the Sea Convention, which was adopted by the UN in 1982, was a game-changer in the expansion of international law to include the planet is huge shared water resources. Numerous significant disputes regarding ocean usage and sovereignty have been resolved by the treaty.')">
+            <div class="description"><br>Implement and enforce international<br>sea low</div>
+            <img src="images/gallery/International-Law.jpg" alt="Image 10" class="gallery-item img">
+            
+        </div>
+    </div>
+
+    
+
+    <div class="footer">
+        <div class="socialIcons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a class="active" href="Home.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">User Profile</a></li>
+            </ul>
+        </div>
+        <div class="copyright">&copy; 2024 Blue Nest. All rights reserved.</div>
+        <img src="logo.png" alt="Logo" class="footer-logo">
+        <button class="page-editor" onclick="location.href='#EditorPage';">Editor's Page</button>
+    </div>
+
+    <script src="thumb.js"></script>
+    
+</body>
+
+</html>
